@@ -23,7 +23,7 @@ services:
       - QUARKUS_DATASOURCE_USERNAME=root
       - QUARKUS_DATASOURCE_PASSWORD=rootpassword
     ports:
-      - "8081:8080"
+      - "8888:8080"
     networks:
       - mynetwork
     depends_on:
@@ -35,7 +35,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: mydb
-      MYSQL_USER: root
       MYSQL_PASSWORD: rootpassword
     volumes:
       - mysql_data:/var/lib/mysql

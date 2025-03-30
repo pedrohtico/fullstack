@@ -4,8 +4,9 @@ FROM openjdk:21
 WORKDIR /app
 
 # Copy the Quarkus JAR file into the container
-COPY authorization-api/target/quarkus-app/lib /app/lib
-COPY authorization-api/target/quarkus-app/app /app/app
+COPY authorization-api/target/quarkus-app/lib /app/lib/
+COPY authorization-api/target/quarkus-app/app /app/app/
+COPY authorization-api/target/quarkus-app/quarkus/ /app/quarkus/
 COPY authorization-api/target/quarkus-app/quarkus-run.jar /app/quarkus-run.jar
 
 # Expose the port that Quarkus will run on
